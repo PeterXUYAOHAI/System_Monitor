@@ -1,0 +1,102 @@
+{% include "System_Monitor/dashboard/header.html" %}
+
+
+
+{% block content %}
+
+
+        <!-- page content -->
+
+        <div class="right_col" role="main">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>My Machine Info</h3>
+              </div>
+
+            </div>
+
+              <div class="clearfix"></div>
+          <div class="">
+            <div class="row top_tiles">
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="tile-stats">
+                  <div class="icon"><i class="fa fa-tasks"></i></div>
+                  <div class="count">{{ p_count_l }}</div>
+                  <h3>Number of Processors (Logical)</h3>
+                  <p>Logical count of your CPU core.</p>
+                </div>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="tile-stats">
+                  <div class="icon"><i class="fa fa-server"></i></div>
+                  <div class="count">{{ m_size }} GB</div>
+                  <h3>Memory Size</h3>
+                  <p>The size of your RAM.</p>
+                </div>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="tile-stats">
+                  <div class="icon"><i class="fa fa-database"></i></div>
+                  <div class="count">{{ disk_free }} GB</div>
+                  <h3>Free Disk Size</h3>
+                  <p>How much space left in your disk.</p>
+                </div>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="tile-stats">
+                  <div class="icon"><i class="fa fa-laptop"></i></div>
+                  <div class="count">{{ os }} </div>
+                  <h3>OS</h3>
+                  <p>The operating system of your machine.</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="">
+              <div class="row top_tiles">
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="tile-stats">
+                  <div class="icon"><i class="fa fa-tasks"></i></div>
+                  <div class="count">{{ p_count }}</div>
+                  <h3>Number of Processors(Physical)</h3>
+                  <p>The physical number of your CPU core.</p>
+                </div>
+              </div>
+
+            <div class="row top_tiles">
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="tile-stats">
+                  <div class="icon"><i class="fa fa-tachometer "></i></div>
+                  <div class="count">{{ p_type }}</div>
+                  <h3>Processor Type</h3>
+                  <p>Your processor structure.</p>
+                </div>
+              </div>
+
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="tile-stats">
+                  <div class="icon"><i class="fa fa-cloud"></i></div>
+                  <div class="count">{{ ex_ip }}</div>
+                  <h3>IP address</h3>
+                  <p>Your external IP address.</p>
+                </div>
+              </div>
+
+            </div>
+
+
+          </div>
+
+        </div>
+        <!-- /page content -->
+
+      </div>
+    </div>
+
+{% endblock %}
+{% include "System_Monitor/dashboard/footer.html" %}
+
+
+
+

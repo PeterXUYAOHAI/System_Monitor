@@ -1,0 +1,98 @@
+{% include "System_Monitor/dashboard/header.html" %}
+
+<div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>FastLSH Engine</h3>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+
+
+            <div class="row" id="step_2">
+
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Engine Status <small></small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+
+
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <div class="x_panel tile fixed_height_400">
+                <div class="x_title">
+                  <h2>CPU Monitor</h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                  <h4>CPU Usage across cores</h4>
+
+                  {{ cpu_html | safe}}
+
+                </div>
+              </div>
+            </div>
+
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>RAM Usage</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                      <div id="container-rpm" style="width: 300px; height: 200px; float: left"></div>
+                  </div>
+                </div>
+              </div>
+
+
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    	{% load staticfiles %}
+
+
+    {% include "System_Monitor/dashboard/footer.html" %}
+    <script src="{% static '/vendors/highcharts/highcharts.js' %}"></script>
+    <script src="{% static '/vendors/highcharts/highcharts-more.js' %}"></script>
+    <script src="{% static '/vendors/highcharts/modules/solid-gauge.js' %}"></script>
+    <script src="{% static '/FastLSH/js/run_model.js' %}"></script>
+
+
