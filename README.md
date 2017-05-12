@@ -2,9 +2,11 @@
 Web-based system monitor
 
 ###
-System_Monitor provides a web-based graphic interface of the system staus. 
-
-
+System_Monitor provides a web-based graphic interface of the system staus.  
+![System-Info](https://cloud.githubusercontent.com/assets/11495951/26001746/ff130860-375f-11e7-85bd-b43acb0c00e1.png)
+system-info lists some basic information about the machine.  
+![System-Monitor](https://cloud.githubusercontent.com/assets/11495951/26001744/fed6678e-375f-11e7-9fb1-ff37f3400939.png)
+system-monitor show the cpu and memory status in real-time.  
 
 ## Requirement  
 * Django >= 1.11.1  
@@ -26,3 +28,4 @@ find install guide [here](https://docs.djangoproject.com/en/1.11/topics/install/
 * Add Network Monitor  
 * Add Process Monitor
 * Add more System Info
+* Add wechat auto-notification function
